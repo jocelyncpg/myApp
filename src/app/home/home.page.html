@@ -1,20 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      BIENVENIDO
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-card> <!--inicio card-->
+    <ion-card-header>
+      <ion-card-title>{{serie.nombre}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img alt="" src={{serie.nombre}} routerLink="/starwars"/>
+      <br><br>
+    </ion-card-content>
+  </ion-card><!--fin card-->
+
+  <ion-list><!--login inicio-->
+    <ion-item>
+      <ion-input [(ngModel)]="user.usuario" label="Usuario" type="email" placeholder="usuario@gmail.com"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [(ngModel)]="user.password" label="Password" type="password" value="password"></ion-input>
+    </ion-item>
+  </ion-list><!--login fin-->
+
+  <div>
+    <ion-button fill="outline" (click)="goToStarWars()">ENVIAR</ion-button>
   </div>
+
 </ion-content>
+
+<ion-footer> <!--footer inicio-->
+  <ion-toolbar class="ion-text-center">
+    <ion-icon name="logo-twitter"></ion-icon>
+    <ion-icon name="logo-instagram"></ion-icon>
+    <ion-icon name="logo-facebook"></ion-icon>
+    <ion-icon name="logo-tiktok"></ion-icon>
+  </ion-toolbar>
+</ion-footer><!--footer fin-->

@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'starwars',
+    loadChildren: () => import('./starwars/starwars.module').then( m => m.StarwarsPageModule)
+  },
 ];
 
 @NgModule({
