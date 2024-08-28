@@ -10,8 +10,8 @@ import { NavigationExtras } from '@angular/router';
 export class HomePage {
 
   serie = {
-    nombre: "Formulario Login",
-    img: ""
+    nombre: "",
+    img: "https://concepto.de/wp-content/uploads/2019/04/Nebulosa-de-Orion-e1554813166944.jpg"
   }
 
   user = {

@@ -10,6 +10,9 @@ export class StarwarsPage implements OnInit {
   usuario: string = '';
 
   constructor(private route: ActivatedRoute) {}
+  nebu = {
+    img: "https://concepto.de/wp-content/uploads/2019/04/Nebulosa-de-Orion-e1554813166944.jpg"
+  }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {

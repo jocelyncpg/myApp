@@ -73,3 +73,14 @@
     color: white;
     border-color: aquamarine;
   }
+
+  .animated-card {
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  .animated-card:hover {
+    transform: scale(2.05);
+  }
+  img{
+    border-radius: 8px;
+  }

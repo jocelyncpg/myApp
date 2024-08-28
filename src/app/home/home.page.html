@@ -8,17 +8,10 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card> <!--inicio card-->
-    <ion-card-header>
-      <ion-card-title>{{serie.nombre}}</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <img alt="" src={{serie.nombre}} routerLink="/starwars"/>
-      <br><br>
-    </ion-card-content>
-  </ion-card><!--fin card-->
-
+<div>
+  <img alt="" src={{serie.img}} routerLink="/starwars"/>
+  <br><br>
+</div>
   <ion-list><!--login inicio-->
     <ion-item>
       <ion-input [(ngModel)]="user.usuario" label="Usuario" type="email" placeholder="usuario@gmail.com"></ion-input>
@@ -32,7 +25,7 @@
   <div>
     <ion-button fill="outline" (click)="goToStarWars()">ENVIAR</ion-button>
   </div>
-
+  
 </ion-content>
 
 <ion-footer> <!--footer inicio-->
