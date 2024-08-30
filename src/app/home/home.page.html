@@ -1,38 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      BIENVENIDO
-    </ion-title>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-<div>
-  <img alt="" src={{serie.img}} routerLink="/starwars"/>
-  <br><br>
-</div>
-  <ion-list><!--login inicio-->
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-input [(ngModel)]="user.usuario" label="Usuario" type="email" placeholder="usuario@gmail.com"></ion-input>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="username"></ion-input>
     </ion-item>
-    <br>
-    <ion-item>
-      <ion-input [(ngModel)]="user.password" label="Password" type="password" value="password"></ion-input>
-    </ion-item>
-  </ion-list><!--login fin-->
 
-  <div>
-    <ion-button fill="outline" (click)="goToStarWars()">ENVIAR</ion-button>
-  </div>
-  
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Ingresar</ion-button>
+    <ion-button expand="full" fill="clear" routerLink="/reset-password">Restablecer Contraseña</ion-button>
+  </form>
 </ion-content>
-
-<ion-footer> <!--footer inicio-->
-  <ion-toolbar class="ion-text-center">
-    <ion-icon name="logo-twitter"></ion-icon>
-    <ion-icon name="logo-instagram"></ion-icon>
-    <ion-icon name="logo-facebook"></ion-icon>
-    <ion-icon name="logo-tiktok"></ion-icon>
-  </ion-toolbar>
-</ion-footer><!--footer fin-->
